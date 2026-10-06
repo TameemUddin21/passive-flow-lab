@@ -34,6 +34,8 @@ If a check fails, use the fallback in Section 8 before continuing. Commit to the
 
 **Phase 2, price impact.** Market-model abnormal returns, cumulative over windows around announcement and effective dates. Regress on log ADV multiple with controls for size and prior momentum. Robustness: placebo dates, alternative benchmarks, winsorising, standard errors clustered by date, and a check for change over time.
 
+**Phase 3, forecast** End-of-project deliverable: a live forecast for the March 2027 S&P 500 reconstitution, published before the effective date, alongside a full methodology note written in Intropic's research format.
+
 ## 6. Skills targeted (from the interview feedback)
 
 | Skill | How the project covers it |
