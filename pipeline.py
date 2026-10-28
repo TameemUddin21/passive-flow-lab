@@ -1,8 +1,8 @@
 """
-Passive Flow Lab — Pipeline Test
+Passive Flow Lab — Data Pipeline
 
-Tests the flow model on S&P 500 index events:
-    1. Load historical event list.
+Builds the event dataset for the passive flow model:
+    1. Load historical S&P 500 addition/deletion event list.
     2. Pull shares outstanding from SEC EDGAR.
     3. Pull daily OHLCV from yfinance.
     4. Compute excess volume on the trade date vs a 60-day median ADV.
@@ -29,7 +29,7 @@ Shares outstanding ("shares") — known limitation, fixed here:
     existing `missing_shares` flag in flags.py / clean_events.py already
     handles that case correctly.
 
-Run: python pipeline_test.py
+Run: python pipeline.py
 """
 
 from edgar import Company, set_identity
@@ -305,7 +305,7 @@ def print_volume_window(
     window = prices.loc[
         event_date - pd.Timedelta(days=window_days) : event_date + pd.Timedelta(days=5)
     ].copy()
-    window["excess_adv"] = window["Volume"] / adv
+    window["excess_adv"] = (window["Volume"] - adv) / adv
 
     print(f"\nVolume window: {ticker}")
     print(f"  Effective date: {event_date.date()}")
