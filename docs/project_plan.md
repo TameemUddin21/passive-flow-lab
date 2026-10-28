@@ -35,7 +35,7 @@ If a check fails, use the fallback in Section 8 before continuing. Commit to the
 
 **Phase 3, forecast.** End-of-project deliverable: a live forecast for the March 2027 S&P 500 reconstitution, published before the effective date, alongside a full methodology note 
 
-## 6. Skills targeted (from the interview feedback)
+## 6. Skills targeted
 
 | Skill | How the project covers it |
 |---|---|
