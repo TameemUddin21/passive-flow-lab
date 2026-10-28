@@ -1,4 +1,4 @@
-﻿__pycache__/
+__pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
@@ -7,3 +7,8 @@ venv/
 *.egg-info/
 .DS_Store
 Thumbs.db
+
+# Pipeline scratch files — generated automatically, not for version control
+data/event_results_partial.csv
+data/errors.log
+data/event_results.csv
